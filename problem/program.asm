@@ -1,6 +1,23 @@
 // CRISTIAN CAMILO SANCHEZ RESTREPO
 // 000428435
 // cristianc.sanchezr@upb.edu.co
-(START)
-    @START
-    0;JMP
+
+(KEYCHECK)
+@24576
+D=M
+@70
+D=D-A
+@FILL
+D;JEQ
+
+@24576
+D=M
+@67
+D=D-A
+@CLEAR
+D;JEQ
+@KEYCHECK
+0;JMP
+
+
+
