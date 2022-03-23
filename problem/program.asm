@@ -1,6 +1,59 @@
-// COLOCO AQUÍ TU NOMBRE COMPLETO
-// COLOCA AQUÍ TU ID
-// COLOCA AQUÍ TU CORREO ELECTRÓNICO
-(START)
-    @START
-    0;JMP
+// CRISTIAN CAMILO SANCHEZ RESTREPO
+// 000428435
+// cristianc.sanchezr@upb.edu.co
+
+(RESET)
+@SCREEN
+D=A
+@0
+M=D
+
+(KEYCHECK)
+@24576
+D=M
+@70
+D=D-A
+@FILL
+D;JEQ
+
+@24576
+D=M
+@67
+D=D-A
+@CLEAR
+D;JEQ
+@KEYCHECK
+0;JMP
+
+(FILL)
+@1
+M=-1
+@FILLSCREEN
+0;JMP
+
+(CLEAR)
+@1
+M=0
+@FILLSCREEN
+0;JMP
+
+(FILLSCREEN)
+   @1
+    D=M
+    @0
+    A=M
+    M=D
+    @0
+    D=M+1
+    @KBD
+    D=A-D
+    @0
+    M=M+1
+    A=M
+    @FILLSCREEN
+    D;JGT
+@RESET
+0;JMP
+
+
+
